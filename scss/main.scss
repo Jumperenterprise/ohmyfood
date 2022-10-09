@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$gray-color: #EAEAEA;
+$gray-shadow-color: #4d4b4b;
+
+.button--primary {
+    width: 75%;
+    margin: 10px;
+    padding: 14px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 50px;
+    background-image: linear-gradient($secondary-color, $primary-color);
+}
+
+header {
+    background-color: #F7F7F7;
+    nav {
+
+        .logo__container {
+            width: 60%;
+            margin: 8% auto 0;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .container__text {
+        background: $gray-color;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        margin-top: 8%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 3fr;
+        gap: 20px 0;
+        .container__title {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 3;
+
+            h1 {
+                margin: 10% 5%;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+
+            p {
+                margin: 5% 5%;
+                text-align: center;
+                font-size: 1rem;
+            }
+        }
+
+        .container__button {
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
