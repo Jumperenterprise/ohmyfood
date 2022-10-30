@@ -5,6 +5,7 @@
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 
 .button--primary {
@@ -22,7 +23,7 @@
 }
 
 header {
-  background-color: #F7F7F7;
+  margin-bottom: 2.5em;
 }
 header nav .logo__container {
   width: 60%;
@@ -70,6 +71,87 @@ header section .container__button {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+main section .container__group-buttons h2 {
+  margin-left: 1.7rem;
+}
+main section .container__group-buttons .container__buttons {
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main section .container__group-buttons .container__buttons .button {
+  position: relative;
+  padding: 8%;
+  margin: 1.2rem;
+  height: 2.5rem;
+  width: 80%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+main section .container__group-buttons .container__buttons .button .container--bubble {
+  position: absolute;
+  left: -4%;
+  background: #9356DC;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main section .container__group-buttons .container__buttons .button .container--bubble p {
+  color: #fff;
+}
+main section .container__group-buttons .container__buttons .button .fa-solid {
+  color: #4d4b4b;
+  margin-right: 8px;
+}
+main .container__restaurant {
+  padding: 5%;
+}
+main .container__restaurant .container__cards .card {
+  width: 18em;
+  margin: 1.6rem auto;
+  border-radius: 15px;
+  overflow: hidden;
+  color: #000;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+main .container__restaurant .container__cards .card .container__img {
+  width: 100%;
+}
+main .container__restaurant .container__cards .card .container__img img {
+  width: 100%;
+  object-fit: cover;
+}
+main .container__restaurant .container__cards .card .card__body {
+  display: grid;
+  grid-template-columns: 2fr;
+  grid-template-rows: 2fr;
+}
+main .container__restaurant .container__cards .card .card__body h3 {
+  grid-column-start: 1;
+}
+main .container__restaurant .container__cards .card .card__body p {
+  grid-column-start: 1;
+}
+
+footer {
+  background: #353535;
+}
+footer .container__logo {
+  height: 5rem;
+}
+footer .container__logo .logo {
+  height: 2rem;
+  width: 100%;
+  color: white;
 }
 
 /*# sourceMappingURL=index.css.map */

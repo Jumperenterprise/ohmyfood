@@ -1,37 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import './utils.scss';
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    @include reset_styles
 }
 
-$primary-color: #9356DC;
-$secondary-color: #FF79DA;
-$tertiary-color: #99E2D0;
-$gray-color: #EAEAEA;
-$gray-shadow-color: #4d4b4b;
-
 .button--primary {
-    width: 75%;
-    margin: 10px;
-    padding: 14px;
-    font-size: 0.8rem;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
-    color: white;
-    box-shadow: 0 0 20px #eee;
-    border-radius: 50px;
-    background-image: linear-gradient($secondary-color, $primary-color);
+    @include prymary_button_style
 }
 
 header {
-    background-color: #F7F7F7;
+    margin-bottom: 2.5em;
     nav {
-
         .logo__container {
             width: 60%;
             margin: 8% auto 0;
@@ -85,5 +65,102 @@ header {
             align-items: center;
             justify-content: center;
         }
+    }
+}
+
+main {
+    section {
+        .container__group-buttons {
+            h2 {
+                margin-left: 1.7rem;
+            }
+            .container__buttons {
+                margin-top: 1.2rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .button {
+                    position: relative;
+                    padding: 8%;
+                    margin: 1.2rem;
+                    height: 2.5rem;
+                    width: 80%;
+                    border-radius: 10px;
+                    display: flex;
+                    align-items: center;
+                    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+                    .container--bubble {
+                        position: absolute;
+                        left: -4%;  
+                        background: $primary-color;
+                        height: 1.2rem;
+                        width: 1.2rem;
+                        border-radius: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        p {
+                            color: #fff;
+                        }
+                    }
+                    .fa-solid {
+                        color: $gray-shadow-color;
+                        margin-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+
+    .container__restaurant {
+        padding: 5%;
+        h2 {
+
+        }
+        .container__cards {
+            .card {
+                width: 18em;
+                margin: 1.6rem auto;
+                border-radius: 15px;
+                overflow: hidden;
+                color: $color-text-primary;
+                box-shadow: $shadow;
+                .container__img {
+                    width: 100%;
+                    img {
+                        width: 100% ;
+                        object-fit: cover;
+                    }
+                }
+                .card__body {
+                    display: grid;
+                    grid-template-columns: 2fr;
+                    grid-template-rows: 2fr;
+                    h3 {
+                        grid-column-start: 1;
+                    }
+                    p {
+                        grid-column-start: 1;
+                    }                    
+                }
+            }
+        }
+    }
+}
+
+
+footer {
+    background: #353535;
+    .container__logo {
+        height: 5rem;
+        .logo {
+            height: 2rem;
+            width: 100%;
+            color: white;
+        }
+    }
+    .container__list {
+
     }
 }
