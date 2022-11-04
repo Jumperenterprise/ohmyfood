@@ -1,0 +1,29 @@
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+$gray-color: #EAEAEA;
+$gray-shadow-color: #4d4b4b;
+$shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+$color-text-primary: #000;
+
+$title-size: 5.9vw;
+$title-sizex2: 7.9vw;
+$title-family:'Shrikhand', cursive;
+$text-color: #fff;
+
+
+@mixin title--primary($color-text, $size-title) {
+    font-size: $size-title;
+    font-family: $title-family;
+    color: $color-text;
+}
+
+@mixin navigation {
+    .logo__container {
+        width: 10rem;
+        margin: 5.5% auto 1.5%;
+        img {
+            width: 100%;
+        }
+    }
+}

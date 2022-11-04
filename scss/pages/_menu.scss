@@ -1,0 +1,76 @@
+.container__main-menu {
+    .header__menu {
+        margin-bottom: 0;
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .logo__container {
+            }
+        }
+        .header-img {
+            background-image: url("../../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 50vh;
+        }
+    }
+
+    .container__menu {
+        width: 100%;
+        background: $gray-color;
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        .banner__tittle {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 0 1.2rem;
+            .title--primary {
+                @include title--primary($color-text-primary, $title-sizex2);
+            }
+        }
+        .container__section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .section__tittle {
+                align-self: flex-start;
+                padding: 0 6%;
+                margin-top: 1.6rem;
+            }
+            .item__info {
+                background: #fff;
+                width: 90%;
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 80% 20%;
+                padding: 5%;
+                margin-bottom: 2.5rem;
+                border-radius: 15px;
+                box-shadow: $gray-shadow-color;
+                .info__title {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+                }
+                .info__subtitle {
+                    color: #948f8f;
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                }
+                .info__prix {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+                }
+            }
+        }
+    }
+}

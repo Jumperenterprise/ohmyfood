@@ -1,41 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import './utils.scss';
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+@import "./utils/variables";
+@import "./utils/mixins";
+
+@import "./layouts/navigation";
+@import "./layouts/footer";
+
+@import "./pages/home";
+@import "./pages/menu";
+
+@import "./components/buttons.scss";
 
 * {
-    @include reset_styles
+    @include reset_styles;
 }
 
-.button--primary {
-    @include prymary_button_style
-}
 
 header {
     margin-bottom: 2.5em;
     nav {
-        .logo__container {
-            width: 60%;
-            margin: 8% auto 0;
-
-            img {
-                width: 100%;
-            }
-        }
+        @include navigation
     }
 
     .container__text {
         background: $gray-color;
-        height: 4rem;
+        height: 3.2rem;
         display: flex;
         justify-content: center;
         align-items: center;
+        i {
+            margin-right: 3%;
+        }
     }
 
-    section {
-        margin-top: 8%;
+    .container__section {
+        background: #f7f7f7;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 3fr;
-        gap: 20px 0;
+        gap: 2px 0;
         .container__title {
             grid-row-start: 1;
             grid-row-end: 2;
@@ -43,7 +47,7 @@ header {
             grid-column-end: 3;
 
             h1 {
-                margin: 10% 5%;
+                margin: 8% 0 0 0;
                 text-align: center;
                 font-size: 1.5rem;
             }
@@ -64,6 +68,7 @@ header {
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 15%;
         }
     }
 }
@@ -75,12 +80,12 @@ main {
                 margin-left: 1.7rem;
             }
             .container__buttons {
-                margin-top: 1.2rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 .button {
+                    background: #f7f7f7;
                     position: relative;
                     padding: 8%;
                     margin: 1.2rem;
@@ -92,7 +97,7 @@ main {
                     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
                     .container--bubble {
                         position: absolute;
-                        left: -4%;  
+                        left: -4%;
                         background: $primary-color;
                         height: 1.2rem;
                         width: 1.2rem;
@@ -116,51 +121,74 @@ main {
     .container__restaurant {
         padding: 5%;
         h2 {
-
         }
         .container__cards {
             .card {
-                width: 18em;
-                margin: 1.6rem auto;
+                width: 20em;
+                margin: 1.2rem auto;
                 border-radius: 15px;
                 overflow: hidden;
                 color: $color-text-primary;
                 box-shadow: $shadow;
                 .container__img {
                     width: 100%;
+                    height: 12rem;
+                    overflow: hidden;
                     img {
-                        width: 100% ;
+                        width: 100%;
                         object-fit: cover;
                     }
                 }
                 .card__body {
+                    padding: 1rem;
                     display: grid;
                     grid-template-columns: 2fr;
-                    grid-template-rows: 2fr;
+                    grid-template-rows: 1rem 1rem;
                     h3 {
                         grid-column-start: 1;
+                        grid-column-end: 2;
+                        grid-row-start: 1;
+                        grid-row-end: 2;
                     }
                     p {
+                        margin-top: 5px;
                         grid-column-start: 1;
-                    }                    
+                        grid-column-end: 2;
+                        grid-row-start: 2;
+                        grid-row-end: 3;
+                    }
+                    i {
+                        grid-row-start: 1;
+                        grid-row-end: 3;
+                        grid-column-start: 2;
+                        grid-column-end: 3;
+                        margin-top: 0.9rem;
+                    }
                 }
             }
         }
     }
 }
 
-
 footer {
     background: #353535;
+    overflow: hidden;
     .container__logo {
-        height: 5rem;
-        .logo {
-            height: 2rem;
-            width: 100%;
-            color: white;
+        .text__logo{
+            margin: 0.7rem 0.5rem;
+            @include title--primary($text-color, $title-size);
         }
     }
     .container__list {
-
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+        a {
+            color: #fff;
+            i {
+                margin: 0 0.5rem;
+            }
+        }
     }
 }
+
