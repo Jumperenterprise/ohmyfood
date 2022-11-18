@@ -1,0 +1,10 @@
+.bubble {
+    background: #99e2d0;
+    color: #008766;
+    height: 1.9rem;
+    width: 4.9rem;
+    font-size: .9rem;
+    font-weight: 500;
+    border-radius: 2.5px;
+    @include bubble
+}
