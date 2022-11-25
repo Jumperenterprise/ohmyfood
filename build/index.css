@@ -146,6 +146,9 @@ main .container__restaurant .container__cards .card .card__body i {
   grid-column-end: 3;
   margin-top: 0.9rem;
 }
+main .container__restaurant .container__cards .card .card__body i:hover {
+  background-color: red;
+}
 
 footer {
   background: #353535;
@@ -169,15 +172,6 @@ footer .container__list a i {
   margin: 0 0.5rem;
 }
 
-@keyframes aparation {
-  0% {
-    transform: translateX(-200px);
-    opacity: 22%;
-  }
-  100% {
-    transform: translateX(0px);
-  }
-}
 .container__main-menu .header__menu {
   margin-bottom: 0;
 }
@@ -187,7 +181,7 @@ footer .container__list a i {
   justify-content: center;
 }
 .container__main-menu .header__menu .navigation a .fa-solid, .container__main-menu .header__menu .navigation a .fa-arrow-left {
-  padding-left: 20px;
+  padding-left: 40px;
 }
 .container__main-menu .header__menu .header-img {
   background-image: url("../../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
@@ -224,7 +218,7 @@ footer .container__list a i {
   align-self: flex-start;
   padding: 0 6%;
   margin-top: 1.6rem;
-  border-bottom: 5px solid #99E2D0;
+  border: 2px solid red;
 }
 .container__main-menu .container__menu .container__section .item__info {
   background: #fff;
@@ -236,7 +230,6 @@ footer .container__list a i {
   margin-bottom: 2.5rem;
   border-radius: 15px;
   box-shadow: #4d4b4b;
-  animation: aparation 1.5s;
 }
 .container__main-menu .container__menu .container__section .item__info .info__title {
   grid-column-start: 1;
@@ -256,10 +249,6 @@ footer .container__list a i {
   grid-column-end: 3;
   grid-row-start: 2;
   grid-row-end: 3;
-}
-.container__main-menu .container__menu .container__section .item__info .info__prix:hover {
-  transition: all 0.2s linear 0s;
-  transform: translateX(-60px);
 }
 
 .button--primary {
