@@ -151,6 +151,9 @@ main {
                         grid-column-start: 2;
                         grid-column-end: 3;
                         margin-top: 0.9rem;
+                    }
+                    i:hover {
+                        color: red;                 
                     }           
                 }
             }
@@ -174,7 +177,8 @@ footer {
         a {
             color: #fff;
             i {
-                margin: 0 0.5rem;
+                font-size: 0.8rem;
+                margin: 0 0.2rem;
             }
         }
     }
