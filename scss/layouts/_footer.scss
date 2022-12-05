@@ -1,0 +1,25 @@
+
+footer {
+    background: #353535;
+    overflow: hidden;
+    padding: 0.8rem;
+    .container__logo {
+        .text__logo{
+            margin: 0.7rem 0.5rem;
+            @include title--primary($text-color, $title-size);
+        }
+    }
+    .container__list {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0.5rem;
+        a {
+            margin: 0.2rem 0;
+            color: #fff;
+            i {
+                font-size: 0.8rem;
+                margin-right: 0.6rem;
+            }
+        }
+    }
+}

@@ -3,6 +3,7 @@
         transform: translateX(-200px);
         opacity: 22%;
     }
+
     100% {
         transform: translateX(0px);
     }
@@ -11,19 +12,24 @@
 .container__main-menu {
     .header__menu {
         margin-bottom: 0;
+
         .navigation {
             display: flex;
             align-items: center;
             justify-content: center;
-            .logo__container {
-            }
+
+            .logo__container {}
+
             a {
-                .fa-solid, .fa-arrow-left {
-                    padding-left: 20px;
+
+                .fa-solid,
+                .fa-arrow-left {
+                    padding-left: 20px;                   
                 }
             }
 
         }
+
         .header-img {
             background-image: url("../../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
             background-position: center;
@@ -39,21 +45,29 @@
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
         margin-top: -25%;
+
         .banner__tittle {
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
             padding: 0 1.2rem;
+
             .title--primary {
                 margin-top: 25px;
-                @include title--primary($color-text-primary, $title-sizex2);                
+                @include title--primary($color-text-primary, $title-sizex2);            
+            }
+            i {
+                margin: 30px 1rem 0 1rem;
+                font-size: 1.4rem;
             }
         }
+
         .container__section {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
+
             .section__tittle {
                 font-size: 1rem;
                 color: $gray-shadow-color;
@@ -63,8 +77,9 @@
                 margin-bottom: 1%;
                 text-transform: uppercase;
                 font-weight: 400;
-                
+
             }
+
             .underline {
                 background: $tertiary-color;
                 align-self: flex-start;
@@ -72,41 +87,65 @@
                 width: 2.5rem;
                 margin: 0 0 3% 6%;
             }
+
             .item__info {
                 background: #fff;
                 width: 90%;
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                grid-template-columns: 80% 20%;
-                padding: 5%;
+                display: flex;
+                justify-content: space-between;
                 margin-bottom: 2.5rem;
                 border-radius: 15px;
                 box-shadow: $gray-shadow-color;
                 animation: aparation 1.5s;
-                .info__title {
-                    grid-column-start: 1;
-                    grid-column-end: 2;
-                    grid-row-start: 1;
-                    grid-row-end: 2;
-                }
-                .info__subtitle {
-                    color: #948f8f;
-                    grid-column-start: 1;
-                    grid-column-end: 2;
-                    grid-row-start: 2;
-                    grid-row-end: 3;
-                }
+                overflow: hidden;
+
                 .info__prix {
-                    grid-column-start: 2;
-                    grid-column-end: 3;
-                    grid-row-start: 2;
-                    grid-row-end: 3;
+                    padding: 5%;
                 }
-                .info__prix:hover {
-                    transition: all 0.2s linear 0s;
-                    transform: translateX(-60px);
+
+                .container_anime {
+                    height: 5rem;
+                    width: 4rem;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $tertiary-color;
+                    transition: transform 0.2s ease-out;
+                }
+
+                .container__info {
+                    padding: 5%;
+
+                    .info__title {}
+
+                    .info__subtitle {
+                        color: #948f8f;
+
+                    }
+                }
+
+                .info__prix {
+                    padding: 5%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    overflow: hidden;
+                }
+
+                .container_anime {
+                    width: 4rem;
+                    border-top-right-radius: 15px;
+                    border-bottom-right-radius: 15px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: $tertiary-color;
+                    transition: transform 0.2s ease-out;
                 }
             }
+
             .button--primary {
                 margin-bottom: 10%;
             }

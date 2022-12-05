@@ -9,8 +9,9 @@ $color-text-primary: #000;
 $gradient:linear-gradient($secondary-color, $primary-color);
 
 $title-size: 5.9vw;
-$title-sizex2: 7.9vw;
+$title-sizex2: 6.4vw;
 $title-family:'Shrikhand', cursive;
 $text-color: #fff;
 
-
+$bp-small: 576px;
+$bp-large: 1200px;
