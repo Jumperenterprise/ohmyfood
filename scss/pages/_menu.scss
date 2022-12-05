@@ -98,21 +98,31 @@
                 box-shadow: $gray-shadow-color;
                 animation: aparation 1.5s;
                 overflow: hidden;
-
-                .info__prix {
-                    padding: 5%;
-                }
-
-                .container_anime {
-                    height: 5rem;
-                    width: 4rem;
-                    border-top-right-radius: 15px;
-                    border-bottom-right-radius: 15px;
+                .box-animation {
                     display: flex;
+                    justify-content: space-between;
                     align-items: center;
-                    justify-content: center;
-                    background: $tertiary-color;
-                    transition: transform 0.2s ease-out;
+                    transition: transform 530ms ease-in-out;
+                    transform: translate(65%, 0);
+                    &:hover {
+                        transform: translate(0, 0);
+                    }
+                    .info__prix {
+                        padding: 5%;
+                        padding-right: 3.4rem;
+                    }
+    
+                    .container_anime {
+                        height: 5rem;
+                        width: 4rem;
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background: $tertiary-color;
+                        transition: transform 0.2s ease-out;
+                    }
                 }
 
                 .container__info {

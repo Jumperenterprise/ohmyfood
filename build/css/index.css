@@ -346,10 +346,21 @@ main .container__restaurant .container__cards .card .card__body i:hover {
   animation: aparation 1.5s;
   overflow: hidden;
 }
-.container__main-menu .container__menu .container__section .item__info .info__prix {
-  padding: 5%;
+.container__main-menu .container__menu .container__section .item__info .box-animation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 530ms ease-in-out;
+  transform: translate(65%, 0);
 }
-.container__main-menu .container__menu .container__section .item__info .container_anime {
+.container__main-menu .container__menu .container__section .item__info .box-animation:hover {
+  transform: translate(0, 0);
+}
+.container__main-menu .container__menu .container__section .item__info .box-animation .info__prix {
+  padding: 5%;
+  padding-right: 3.4rem;
+}
+.container__main-menu .container__menu .container__section .item__info .box-animation .container_anime {
   height: 5rem;
   width: 4rem;
   border-top-right-radius: 15px;
