@@ -346,19 +346,19 @@ main .container__restaurant .container__cards .card .card__body i:hover {
   animation: aparation 1.5s;
   overflow: hidden;
 }
+.container__main-menu .container__menu .container__section .item__info:hover .box-animation {
+  transform: translate(0, 0);
+}
+.container__main-menu .container__menu .container__section .item__info .info__prix {
+  padding: 5%;
+  padding-right: 3.4rem;
+}
 .container__main-menu .container__menu .container__section .item__info .box-animation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: transform 530ms ease-in-out;
   transform: translate(65%, 0);
-}
-.container__main-menu .container__menu .container__section .item__info .box-animation:hover {
-  transform: translate(0, 0);
-}
-.container__main-menu .container__menu .container__section .item__info .box-animation .info__prix {
-  padding: 5%;
-  padding-right: 3.4rem;
 }
 .container__main-menu .container__menu .container__section .item__info .box-animation .container_anime {
   height: 5rem;
@@ -371,6 +371,10 @@ main .container__restaurant .container__cards .card .card__body i:hover {
   background: #99E2D0;
   transition: transform 0.2s ease-out;
 }
+.container__main-menu .container__menu .container__section .item__info .box-animation .container_anime .fa-solid {
+  color: #fff;
+  font-size: 1.2rem;
+}
 .container__main-menu .container__menu .container__section .item__info .container__info {
   padding: 5%;
 }
@@ -378,6 +382,7 @@ main .container__restaurant .container__cards .card .card__body i:hover {
   color: #948f8f;
 }
 .container__main-menu .container__menu .container__section .item__info .info__prix {
+  margin-right: 2rem;
   padding: 5%;
   display: flex;
   justify-content: space-between;
