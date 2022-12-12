@@ -115,7 +115,7 @@ main .container__restaurant {
   padding: 5%;
 }
 main .container__restaurant .container__cards .card {
-  width: 20em;
+  width: 90%;
   margin: 1.2rem auto;
   border-radius: 15px;
   overflow: hidden;
