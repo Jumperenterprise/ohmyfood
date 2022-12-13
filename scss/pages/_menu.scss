@@ -91,6 +91,7 @@
             .item__info {
                 background: #fff;
                 width: 90%;
+                height: 30%;
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 2.5rem;
@@ -131,13 +132,17 @@
                 }
 
                 .container__info {
-                    padding: 5%;
-
-                    .info__title {}
-
+                    padding: 5%;                
+                    .info__title {
+                        width: 100%;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
                     .info__subtitle {
+                        width: 100%;
                         color: #948f8f;
-
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                 }
 

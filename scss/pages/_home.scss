@@ -1,4 +1,40 @@
 
+.loader {
+    display: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: relative;
+    animation: rotate 1s linear infinite
+  }
+  .loader::before , .loader::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    inset: 0px;
+    border-radius: 50%;
+    border: 5px solid #FFF;
+    animation: prixClipFix 2s linear infinite ;
+  }
+  .loader::after{
+    border-color: #FF3D00;
+    animation: prixClipFix 2s linear infinite , rotate 0.5s linear infinite reverse;
+    inset: 6px;
+  }
+
+  @keyframes rotate {
+    0%   {transform: rotate(0deg)}
+    100%   {transform: rotate(360deg)}
+  }
+
+  @keyframes prixClipFix {
+      0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+      25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+      50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+      75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+      100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+  }
+
 header {
     margin-bottom: 2.5em;
 
@@ -156,8 +192,12 @@ main {
                         grid-column-end: 3;
                         margin-top: 0.9rem;
                     }
-
-                    i:hover {
+                    .icon-animation {
+                        display: none;
+                    }
+                    i:hover ~ .icon-animation {
+                        display: block;
+                        /* filter: invert(12%) sepia(93%) saturate(7428%) hue-rotate(1deg) brightness(102%) contrast(111%); */
                         filter: invert(49%) sepia(38%) saturate(6988%) hue-rotate(241deg) brightness(90%) contrast(90%);
                     }
                 }
@@ -179,9 +219,6 @@ main {
     }
 
     .container__cards {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
         .card {
             width: 20em;
             margin: 1.2rem auto;
