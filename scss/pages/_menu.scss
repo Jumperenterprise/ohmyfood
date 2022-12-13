@@ -17,9 +17,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-
-            .logo__container {}
-
             a {
 
                 .fa-solid,
@@ -44,7 +41,7 @@
         background: $gray-color;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        margin-top: -25%;
+        margin-top: -10%;
 
         .banner__tittle {
             display: flex;
@@ -90,8 +87,8 @@
 
             .item__info {
                 background: #fff;
-                width: 90%;
-                height: 30%;
+                width: 19rem;
+                height: 4.8rem;
                 display: flex;
                 justify-content: space-between;
                 margin-bottom: 2.5rem;
@@ -170,6 +167,37 @@
             .button--primary {
                 margin-bottom: 10%;
             }
+        }
+    }
+}
+
+@include breakpoint-max($bp-large) {
+
+}
+
+@include breakpoint-min-max($bp-small, $bp-large) {
+    .container__main-menu {
+        .header__menu {
+            .navigation {            
+                height: 10%;
+                .logo__container {
+                    margin: 2.5% auto 1.5%;
+                }
+                a {
+    
+                    .fa-solid,
+                    .fa-arrow-left {
+                        padding-left: 20px;                   
+                    }
+                }
+    
+            }
+            .header-img {
+                height: 60vh;       
+            }
+        }
+        .container__menu {
+            margin-top: -1.9%;
         }
     }
 }

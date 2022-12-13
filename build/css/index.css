@@ -25,107 +25,56 @@ footer .container__list a i {
   margin-right: 0.6rem;
 }
 
-.loader {
-  display: none;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  position: relative;
-  animation: rotate 1s linear infinite;
-}
-
-.loader::before, .loader::after {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  inset: 0px;
-  border-radius: 50%;
-  border: 5px solid #FFF;
-  animation: prixClipFix 2s linear infinite;
-}
-
-.loader::after {
-  border-color: #FF3D00;
-  animation: prixClipFix 2s linear infinite, rotate 0.5s linear infinite reverse;
-  inset: 6px;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes prixClipFix {
-  0% {
-    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
-  }
-  25% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
-  }
-  50% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
-  }
-  75% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
-  }
-  100% {
-    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
-  }
-}
-header {
+.container__main header {
   margin-bottom: 2.5em;
 }
-header nav .logo__container {
+.container__main header nav .logo__container {
   width: 10rem;
   margin: 5.5% auto 1.5%;
 }
-header nav .logo__container img {
+.container__main header nav .logo__container img {
   width: 100%;
 }
-header .container__text {
+.container__main header .container__text {
   background: #EAEAEA;
   height: 3.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-header .container__text i {
+.container__main header .container__text i {
   margin-right: 3%;
 }
-header .container__section {
+.container__main header .container__section {
   background: #f7f7f7;
 }
-header .container__section .container__title h1 {
-  margin: 8% 0 0 0;
+.container__main header .container__section .container__title h1 {
+  padding-top: 4%;
   text-align: center;
   font-size: 1.5rem;
 }
-header .container__section .container__title p {
+.container__main header .container__section .container__title p {
   margin: 5% 5%;
   text-align: center;
   font-size: 1rem;
 }
-header .container__section .container__button {
+.container__main header .container__section .container__button {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 15%;
 }
-
-main section .container__group-buttons h2 {
+.container__main main section .container__group-buttons h2 {
   margin-left: 1.7rem;
 }
-main section .container__group-buttons .container__buttons {
+.container__main main section .container__group-buttons .container__buttons {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-main section .container__group-buttons .container__buttons .button {
+.container__main main section .container__group-buttons .container__buttons .button {
   background: #f7f7f7;
   position: relative;
   padding: 8%;
@@ -137,7 +86,7 @@ main section .container__group-buttons .container__buttons .button {
   align-items: center;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
-main section .container__group-buttons .container__buttons .button .container--bubble {
+.container__main main section .container__group-buttons .container__buttons .button .container--bubble {
   position: absolute;
   left: -4%;
   background: #9356DC;
@@ -148,23 +97,23 @@ main section .container__group-buttons .container__buttons .button .container--b
   align-items: center;
   justify-content: center;
 }
-main section .container__group-buttons .container__buttons .button .container--bubble p {
+.container__main main section .container__group-buttons .container__buttons .button .container--bubble p {
   color: #fff;
 }
-main section .container__group-buttons .container__buttons .button .fa-solid {
+.container__main main section .container__group-buttons .container__buttons .button .fa-solid {
   color: #4d4b4b;
   margin-right: 8px;
 }
-main section .container__group-buttons .container__buttons .button:hover {
+.container__main main section .container__group-buttons .container__buttons .button:hover {
   background: #f5edff;
 }
-main section .container__group-buttons .container__buttons .button:hover .color {
+.container__main main section .container__group-buttons .container__buttons .button:hover .color {
   color: #9356DC;
 }
-main .container__restaurant {
+.container__main main .container__restaurant {
   padding: 5%;
 }
-main .container__restaurant .container__cards .card {
+.container__main main .container__restaurant .container__cards .card {
   width: 90%;
   margin: 1.2rem auto;
   border-radius: 15px;
@@ -172,52 +121,52 @@ main .container__restaurant .container__cards .card {
   color: #000;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
-main .container__restaurant .container__cards .card .container__img {
+.container__main main .container__restaurant .container__cards .card .container__img {
   width: 100%;
   height: 12rem;
   overflow: hidden;
   position: relative;
 }
-main .container__restaurant .container__cards .card .container__img img {
+.container__main main .container__restaurant .container__cards .card .container__img img {
   width: 100%;
   object-fit: cover;
 }
-main .container__restaurant .container__cards .card .card__body {
+.container__main main .container__restaurant .container__cards .card .card__body {
   padding: 1rem;
   display: grid;
   grid-template-columns: 2fr;
   grid-template-rows: 1rem 1rem;
 }
-main .container__restaurant .container__cards .card .card__body h3 {
+.container__main main .container__restaurant .container__cards .card .card__body h3 {
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 1;
   grid-row-end: 2;
 }
-main .container__restaurant .container__cards .card .card__body p {
+.container__main main .container__restaurant .container__cards .card .card__body p {
   margin-top: 5px;
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row-start: 2;
   grid-row-end: 3;
 }
-main .container__restaurant .container__cards .card .card__body i {
+.container__main main .container__restaurant .container__cards .card .card__body i {
   grid-row-start: 1;
   grid-row-end: 3;
   grid-column-start: 2;
   grid-column-end: 3;
   margin-top: 0.9rem;
 }
-main .container__restaurant .container__cards .card .card__body .icon-animation {
+.container__main main .container__restaurant .container__cards .card .card__body .icon-animation {
   display: none;
 }
-main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-animation {
+.container__main main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-animation {
   display: block;
   /* filter: invert(12%) sepia(93%) saturate(7428%) hue-rotate(1deg) brightness(102%) contrast(111%); */
   filter: invert(49%) sepia(38%) saturate(6988%) hue-rotate(241deg) brightness(90%) contrast(90%);
 }
 
-@media (min-width: 576px) {
+@media (min-width: 576.98px) {
   .container__section .container__button .button--primary {
     width: 18%;
   }
@@ -311,6 +260,105 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
     object-fit: cover;
   }
 }
+@media (min-width: 576.98px) and (max-width: 1499.98px) {
+  .container__main header {
+    margin-bottom: 2.5em;
+  }
+  .container__main header nav .logo__container {
+    width: 10rem;
+    margin: 5.5% auto 1.5%;
+  }
+  .container__main header nav .logo__container img {
+    width: 100%;
+  }
+  .container__main header .container__text {
+    background: #EAEAEA;
+    height: 3.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container__main header .container__text i {
+    margin-right: 3%;
+  }
+  .container__main header .container__section {
+    background: #f7f7f7;
+    padding-bottom: 5%;
+  }
+  .container__main header .container__section .container__title h1 {
+    margin: 0;
+    padding-top: 5%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .container__main header .container__section .container__title p {
+    margin: 5% 5%;
+    text-align: center;
+    font-size: 1rem;
+  }
+  .container__main header .container__section .container__button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+  }
+  .container__main header .container__section .container__button .button--primary {
+    width: 50%;
+  }
+  .container__main main section .container__group-buttons .container__buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container__main main section .container__group-buttons .container__buttons .button {
+    background: #f7f7f7;
+    position: relative;
+    padding: 4%;
+    margin: 1.2rem;
+    height: 2.5rem;
+    width: 50%;
+    display: flex;
+    align-items: center;
+  }
+  .container__main main section .container__group-buttons .container__buttons .button .container--bubble {
+    left: -1.8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container__main main .container__restaurant .container__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container__main main .container__restaurant .container__cards .card {
+    width: 34em;
+    margin: 8% auto;
+    border-radius: 15px;
+    overflow: hidden;
+    color: #000;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  .container__main main .container__restaurant .container__cards .card .container__img {
+    width: 100%;
+    height: 12rem;
+    overflow: hidden;
+    position: relative;
+  }
+  .container__main main .container__restaurant .container__cards .card .container__img img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .container__main footer .container__logo .text__logo {
+    font-size: 300%;
+    font-family: "Shrikhand", cursive;
+    color: #fff;
+  }
+}
 @keyframes aparation {
   0% {
     transform: translateX(-200px);
@@ -344,7 +392,7 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
   background: #EAEAEA;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  margin-top: -25%;
+  margin-top: -10%;
 }
 .container__main-menu .container__menu .banner__tittle {
   display: flex;
@@ -387,8 +435,8 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
 }
 .container__main-menu .container__menu .container__section .item__info {
   background: #fff;
-  width: 90%;
-  height: 30%;
+  width: 19rem;
+  height: 4.8rem;
   display: flex;
   justify-content: space-between;
   margin-bottom: 2.5rem;
@@ -462,6 +510,24 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
   margin-bottom: 10%;
 }
 
+@media (min-width: 576.98px) and (max-width: 1499.98px) {
+  .container__main-menu .header__menu .navigation {
+    height: 10%;
+  }
+  .container__main-menu .header__menu .navigation .logo__container {
+    margin: 2.5% auto 1.5%;
+  }
+  .container__main-menu .header__menu .navigation a .fa-solid,
+  .container__main-menu .header__menu .navigation a .fa-arrow-left {
+    padding-left: 20px;
+  }
+  .container__main-menu .header__menu .header-img {
+    height: 60vh;
+  }
+  .container__main-menu .container__menu {
+    margin-top: -1.9%;
+  }
+}
 .button--primary {
   width: 50%;
   margin: 10px;
