@@ -8,7 +8,6 @@
         transform: translateX(0px);
     }
 }
-
 .container__main-menu {
     .header__menu {
         margin-bottom: 0;
@@ -94,10 +93,9 @@
                 margin-bottom: 2.5rem;
                 border-radius: 15px;
                 box-shadow: $gray-shadow-color;
-                animation: aparation 1.5s;
+                animation: aparation 2s;
                 overflow: hidden;
                 &:hover 
-                
                 .box-animation  {
                     transform: translate(0, 0);
                 }
@@ -163,7 +161,12 @@
                     transition: transform 0.2s ease-out;
                 }
             }
-
+            .item__info:nth-child(2n) {
+                animation: aparation 1.5s;
+            }
+            .item__info:nth-child(3n) {
+                animation: aparation 0.5s;
+            }
             .button--primary {
                 margin-bottom: 10%;
             }
