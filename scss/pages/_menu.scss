@@ -99,16 +99,13 @@
                 .box-animation  {
                     transform: translate(0, 0);
                 }
-                .info__prix {
-                    padding: 5%;
-                    padding-right: 3.4rem;
-                }
+
                 .box-animation {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     transition: transform 530ms ease-in-out;
-                    transform: translate(65%, 0);    
+                    transform: translate(55%, 0);    
                     .container_anime {
                         height: 5rem;
                         width: 4rem;
@@ -127,7 +124,9 @@
                 }
 
                 .container__info {
-                    padding: 5%;                
+                    width: 70%;
+                    padding: 5% 0 5% 5%;    
+                    white-space: nowrap;            
                     .info__title {
                         width: 100%;
                         overflow: hidden;
@@ -142,16 +141,17 @@
                 }
 
                 .info__prix {
-                    margin-right: 2rem;
-                    padding: 5%;
+                    width: 100%;
+                    margin-left: -15px;                
+                    padding: 5% 5% 5% 0;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: start;
                     align-items: center;
                     overflow: hidden;
                 }
 
                 .container_anime {
-                    width: 4rem;
+                    width: 10rem;
                     border-top-right-radius: 15px;
                     border-bottom-right-radius: 15px;
                     display: flex;

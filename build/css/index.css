@@ -34,7 +34,7 @@ footer .container__list a i {
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  animation: loader ease-out 3s;
+  animation: loader ease 4s;
   animation-fill-mode: forwards;
 }
 .container__loader .loader {
@@ -56,10 +56,11 @@ footer .container__list a i {
     opacity: 1;
   }
   80% {
-    opacity: 1;
+    opacity: 0;
   }
   100% {
     opacity: 0;
+    z-index: -9999;
   }
 }
 @keyframes rotation {
@@ -214,10 +215,16 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
 
 @media (min-width: 576.98px) {
   .container__section .container__button .button--primary {
-    width: 18%;
+    width: 30%;
+  }
+  .container__cards {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
   .container__cards .card {
-    width: 20em;
+    width: 100%;
     margin: 1.2rem auto;
     border-radius: 15px;
     overflow: hidden;
@@ -494,16 +501,12 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
 .container__main-menu .container__menu .container__section .item__info:hover .box-animation {
   transform: translate(0, 0);
 }
-.container__main-menu .container__menu .container__section .item__info .info__prix {
-  padding: 5%;
-  padding-right: 3.4rem;
-}
 .container__main-menu .container__menu .container__section .item__info .box-animation {
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: transform 530ms ease-in-out;
-  transform: translate(65%, 0);
+  transform: translate(55%, 0);
 }
 .container__main-menu .container__menu .container__section .item__info .box-animation .container_anime {
   height: 5rem;
@@ -521,7 +524,9 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
   font-size: 1.2rem;
 }
 .container__main-menu .container__menu .container__section .item__info .container__info {
-  padding: 5%;
+  width: 70%;
+  padding: 5% 0 5% 5%;
+  white-space: nowrap;
 }
 .container__main-menu .container__menu .container__section .item__info .container__info .info__title {
   width: 100%;
@@ -535,15 +540,16 @@ main .container__restaurant .container__cards .card .card__body i:hover ~ .icon-
   text-overflow: ellipsis;
 }
 .container__main-menu .container__menu .container__section .item__info .info__prix {
-  margin-right: 2rem;
-  padding: 5%;
+  width: 100%;
+  margin-left: -15px;
+  padding: 5% 5% 5% 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: start;
   align-items: center;
   overflow: hidden;
 }
 .container__main-menu .container__menu .container__section .item__info .container_anime {
-  width: 4rem;
+  width: 10rem;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;
