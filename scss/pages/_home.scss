@@ -200,7 +200,7 @@
                             display: block;
                             /* filter: invert(12%) sepia(93%) saturate(7428%) hue-rotate(1deg) brightness(102%) contrast(111%); */
                             filter: invert(49%) sepia(38%) saturate(6988%) hue-rotate(241deg) brightness(90%)
-                                contrast(90%);
+                                contrast(90%);                               
                         }
                     }
                 }
@@ -209,7 +209,7 @@
     }
 
 
-@include breakpoint-min($bp-small) {
+@include breakpoint-small-divices($bp-small) {
     .container__section {
         .container__button {
             .button--primary {
@@ -331,8 +331,7 @@
         }
     }
 }
-@include breakpoint-max($bp-large) {
-}
+
 @include breakpoint-min-max($bp-small, $bp-large) {
     .container__main {
         header {

@@ -64,13 +64,13 @@
 
 
 
-@mixin breakpoint-min($bp) {
+@mixin breakpoint-small-divices($bp) {
     @media (min-width: $bp) {
         @content;
     }
 }
 
-@mixin breakpoint-max($bp) {
+@mixin breakpoint-medium-divices($bp) {
     @media (max-width: $bp) {
         @content;
     }
