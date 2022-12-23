@@ -81,6 +81,9 @@
                 align-items: center;
                 justify-content: center;
                 margin-bottom: 15%;
+                .button--primary {
+                    margin-bottom: 8%;
+                }
             }
         }
     }
@@ -195,12 +198,14 @@
                         }
                         .icon-animation {
                             display: none;
+                            transition: filter 1s ease-in;
+                            color: transparent;
+                            background-image: linear-gradient($primary-color, $secondary-color);
+                            background-clip: text;
+                            -webkit-background-clip: text;
                         }
                         i:hover ~ .icon-animation {
                             display: block;
-                            /* filter: invert(12%) sepia(93%) saturate(7428%) hue-rotate(1deg) brightness(102%) contrast(111%); */
-                            filter: invert(49%) sepia(38%) saturate(6988%) hue-rotate(241deg) brightness(90%)
-                                contrast(90%);                               
                         }
                     }
                 }
@@ -331,7 +336,6 @@
         }
     }
 }
-
 @include breakpoint-min-max($bp-small, $bp-large) {
     .container__main {
         header {
@@ -376,7 +380,6 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin-bottom: 1%;
                     .button--primary {
                         width: 50%;
                     }

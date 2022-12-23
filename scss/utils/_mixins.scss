@@ -63,7 +63,6 @@
 }
 
 
-
 @mixin breakpoint-small-divices($bp) {
     @media (min-width: $bp) {
         @content;

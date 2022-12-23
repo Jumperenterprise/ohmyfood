@@ -102,11 +102,15 @@
                 box-shadow: $gray-shadow-color;
                 animation: aparation 2s;
                 overflow: hidden;
-                &:hover 
+                &:hover        
                 .box-animation  {
                     transform: translate(0, 0);
                 }
-
+                &:hover {
+                    .container__info {
+                        width: 50%;
+                    }
+                }
                 .box-animation {
                     display: flex;
                     justify-content: space-between;
@@ -131,6 +135,7 @@
                 }
 
                 .container__info {
+                    transition: 0.5s linear;
                     width: 70%;
                     padding: 5% 0 5% 5%;    
                     white-space: nowrap;            
@@ -176,6 +181,7 @@
             }
             .button--primary {
                 margin-bottom: 10%;
+                margin-top: 10%;
             }
         }
     }
@@ -204,6 +210,11 @@
         }
         .container__menu {
             margin-top: -1.9%;
+            .banner__tittle {
+                .title--primary {
+                    font-size: 3rem;
+                }
+            }
         }
     }
 }

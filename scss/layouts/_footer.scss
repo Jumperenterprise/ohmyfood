@@ -1,10 +1,9 @@
-
 footer {
     background: #353535;
     overflow: hidden;
     padding: 0.8rem;
     .container__logo {
-        .text__logo{
+        .text__logo {
             margin: 0.7rem 0.5rem;
             @include title--primary($text-color, $title-size);
         }
@@ -19,6 +18,16 @@ footer {
             i {
                 font-size: 0.8rem;
                 margin-right: 0.6rem;
+            }
+        }
+    }
+}
+
+@include breakpoint-min-max($bp-small, $bp-large) {
+    footer {
+        .container__logo {
+            .text__logo {
+                font-size: 7vh;
             }
         }
     }
