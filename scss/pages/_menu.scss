@@ -8,6 +8,13 @@
         transform: translateX(0px);
     }
 }
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-380deg);
+    }
+}
+
 .container__main-menu {
     .header__menu {
         margin-bottom: 0;
@@ -17,7 +24,7 @@
             align-items: center;
             justify-content: center;
             a {
-
+                color: #000;
                 .fa-solid,
                 .fa-arrow-left {
                     padding-left: 20px;                   
@@ -27,11 +34,14 @@
         }
 
         .header-img {
-            background-image: url("../../assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
             height: 40vh;
+            overflow: hidden;
+            .img--position {
+                position: absolute;
+                z-index: -999;
+                height: auto;
+                max-width: 100%;                          
+            }
         }
     }
 
@@ -40,14 +50,19 @@
         background: $gray-color;
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        margin-top: -10%;
+        margin-top: -10rem;
 
         .banner__tittle {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 1.2rem;
-
+            @include lg {
+                margin: 0 10rem;
+            }
+            @include md {
+                padding: 0 2rem;
+            }
             .title--primary {
                 margin-top: 25px;
                 @include title--primary($color-text-primary, $title-sizex2);            
@@ -63,6 +78,12 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
+            @include lg {
+                margin: 0 12%;
+            }
+            @include md {
+                margin: 0 8%;
+            }
             .container__info {
                 display: flex;
                 flex-direction: row;
@@ -106,6 +127,10 @@
                 .box-animation  {
                     transform: translate(0, 0);
                 }
+                &:hover .container_anime 
+                    .fa-solid {
+                        animation: rotate 0.6s ease-in;
+                }
                 &:hover {
                     .container__info {
                         width: 50%;
@@ -119,7 +144,7 @@
                     transform: translate(55%, 0);    
                     .container_anime {
                         height: 5rem;
-                        width: 4rem;
+                        width: 5rem;
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
                         display: flex;
@@ -129,7 +154,7 @@
                         transition: transform 0.2s ease-out;
                         .fa-solid {
                             color: #fff;
-                            font-size: 1.2rem;
+                            font-size: 1.2rem;                                                          
                         }
                     }
                 }
@@ -187,7 +212,7 @@
     }
 }
 
-@include breakpoint-min-max($bp-small, $bp-large) {
+@include md {
     .container__main-menu {
         .header__menu {
             .navigation {            
@@ -209,7 +234,7 @@
             }
         }
         .container__menu {
-            margin-top: -1.9%;
+            margin-top: -6.9%;
             .banner__tittle {
                 .title--primary {
                     font-size: 3rem;

@@ -23,7 +23,7 @@ footer {
     }
 }
 
-@include breakpoint-min-max($bp-small, $bp-large) {
+@include md {
     footer {
         .container__logo {
             .text__logo {
