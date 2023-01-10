@@ -2,19 +2,19 @@ $primary-color: #9356DC;
 $secondary-color: #FF79DA;
 $tertiary-color: #99E2D0;
 $gray-color: #EAEAEA;
+$text-color: #fff;
 $gray-shadow-color: #4d4b4b;
 $shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 $color-text-primary: #000;
-
-$gradient:linear-gradient($secondary-color, $primary-color);
+$gradient: linear-gradient($secondary-color, $primary-color);
 
 $title-size: 5.9vw;
 $title-sizex2: 6.4vw;
-$title-family:'Shrikhand', cursive;
-$text-color: #fff;
+$title-family: 'Shrikhand', cursive;
 
-$bp-small: 576.98px;
-$bp-large: 1499.98px;
+
+// Small smartphones custom
+$bp-small: 280px;
 
 // Small tablets and large smartphones (landscape view)
 $screen-sm-min: 576px;
@@ -27,3 +27,6 @@ $screen-lg-min: 992px;
 
 // Large tablets and desktops
 $screen-xl-min: 1200px;
+
+// Large smartphones custom
+$bp-large: 1499.98px;

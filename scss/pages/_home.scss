@@ -133,8 +133,11 @@ header {
             justify-content: center;
             margin-bottom: 15%;
 
-            .button--primary {
+            .button-primary {
                 margin-bottom: 8%;
+                @include lg {
+                    margin-bottom: 2%;
+                }
             }
         }
     }
@@ -165,7 +168,7 @@ main {
                     align-items: center;
                     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
-                    .container--bubble {
+                    .container-bubble {
                         position: absolute;
                         left: -4%;
                         background: $primary-color;
@@ -212,13 +215,18 @@ main {
 
                 .container__img {
                     width: 100%;
-                    height: 12rem;
+                    height: 10rem;
                     overflow: hidden;
                     position: relative;
-
+                    @include mini {
+                        height: 8rem;
+                    }
                     img {
                         width: 100%;
                         object-fit: cover;
+                    }
+                    @include md {
+                        height: 12rem;
                     }
                 }
 
@@ -277,7 +285,7 @@ main {
 @include sm {
     .container__section {
         .container__button {
-            .button--primary {
+            .button-primary {
                 width: 30%;
             }
         }
@@ -335,7 +343,7 @@ main {
                         align-items: center;
                         box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 
-                        .container--bubble {
+                        .container-bubble {
                             position: absolute;
                             left: -4%;
                             background: $primary-color;
@@ -456,7 +464,7 @@ main {
                     justify-content: center;
                     margin-bottom: 2%;
 
-                    .button--primary {
+                    .button-primary {
                         width: 50%;
 
                         @include lg {
@@ -496,7 +504,7 @@ main {
                                 margin: 2%;
                             }
 
-                            .container--bubble {
+                            .container-bubble {
                                 left: -1.8%;
                                 display: flex;
                                 flex-direction: column;
@@ -542,7 +550,7 @@ main {
         footer {
             .container__logo {
                 .text__logo {
-                    @include title--primary($text-color, 300%);
+                    @include title-primary($text-color, 300%);
                 }
             }
         }

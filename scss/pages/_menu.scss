@@ -36,6 +36,18 @@
         .header-img {
             height: 40vh;
             overflow: hidden;
+            @include mini {
+                height: 47vh;
+            }
+            @include md {
+                height: 50vh;
+            }
+            @include lg {
+                height: 60vh;
+            }
+            @include xl {
+                height: 70vh;
+            }
             .img--position {
                 position: absolute;
                 z-index: -999;
@@ -63,9 +75,9 @@
             @include md {
                 padding: 0 2rem;
             }
-            .title--primary {
+            .title-primary {
                 margin-top: 25px;
-                @include title--primary($color-text-primary, $title-sizex2);            
+                @include title-primary($color-text-primary, $title-sizex2);            
             }
             i {
                 margin: 30px 1rem 0 1rem;
@@ -89,7 +101,7 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: space-around;
-                align-items: center;
+                align-items: center;                
             }
 
             .section__tittle {
@@ -120,9 +132,12 @@
                 justify-content: space-between;
                 margin: 0.5rem ;
                 border-radius: 15px;
-                box-shadow: $gray-shadow-color;
+                box-shadow: $shadow;
                 animation: aparation 2s;
                 overflow: hidden;
+                @include mini {
+                    width: 15rem;
+                }
                 &:hover        
                 .box-animation  {
                     transform: translate(0, 0);
@@ -204,7 +219,7 @@
             .item__info:nth-child(3n) {
                 animation: aparation 0.5s;
             }
-            .button--primary {
+            .button-primary {
                 margin-bottom: 10%;
                 margin-top: 10%;
             }
@@ -229,14 +244,11 @@
                 }
     
             }
-            .header-img {
-                height: 60vh;       
-            }
         }
         .container__menu {
             margin-top: -6.9%;
             .banner__tittle {
-                .title--primary {
+                .title-primary {
                     font-size: 3rem;
                 }
             }
