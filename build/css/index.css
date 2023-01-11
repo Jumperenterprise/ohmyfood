@@ -223,7 +223,7 @@ main .container__restaurant .container__cards .card .container__img {
   overflow: hidden;
   position: relative;
 }
-@media (280px) {
+@media (width: 280px) {
   main .container__restaurant .container__cards .card .container__img {
     height: 8rem;
   }
@@ -547,7 +547,7 @@ main .container__restaurant .container__cards .card .card__body .fa-solid {
   height: 40vh;
   overflow: hidden;
 }
-@media (280px) {
+@media (width: 280px) {
   .container__main-menu .header__menu .header-img {
     height: 47vh;
   }
@@ -658,7 +658,7 @@ main .container__restaurant .container__cards .card .card__body .fa-solid {
   animation: aparation 2s;
   overflow: hidden;
 }
-@media (280px) {
+@media (width: 280px) {
   .container__main-menu .container__menu .container__section .item__info {
     width: 15rem;
   }
@@ -749,7 +749,7 @@ main .container__restaurant .container__cards .card .card__body .fa-solid {
     margin: 2.5% auto 1.5%;
   }
   .container__main-menu .header__menu .navigation a .fa-solid,
-  .container__main-menu .header__menu .navigation a .fa-arrow-left {
+.container__main-menu .header__menu .navigation a .fa-arrow-left {
     padding-left: 20px;
   }
   .container__main-menu .container__menu {
