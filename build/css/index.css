@@ -37,8 +37,10 @@ footer .container__list a i {
   align-items: center;
   justify-content: center;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   z-index: 9999;
+  top: 0;
+  left: 0;
   animation: loader 2s ease-in 1.8s;
   animation-fill-mode: forwards;
 }
@@ -191,7 +193,7 @@ main section .container__group-buttons .container__buttons .button .container-bu
   align-items: center;
   justify-content: center;
 }
-main section .container__group-buttons .container__buttons .button .container-bubble p {
+main section .container__group-buttons .container__buttons .button .container-bubble span {
   color: #fff;
 }
 main section .container__group-buttons .container__buttons .button .fa-solid {
@@ -668,7 +670,7 @@ main .container__restaurant .container__cards .card .card__body .fa-solid {
   animation: rotate 0.6s ease-in;
 }
 .container__main-menu .container__menu .container__section .item__info:hover .container__info {
-  width: 50%;
+  width: 60%;
 }
 .container__main-menu .container__menu .container__section .item__info .box-animation {
   display: flex;
@@ -747,7 +749,7 @@ main .container__restaurant .container__cards .card .card__body .fa-solid {
     margin: 2.5% auto 1.5%;
   }
   .container__main-menu .header__menu .navigation a .fa-solid,
-.container__main-menu .header__menu .navigation a .fa-arrow-left {
+  .container__main-menu .header__menu .navigation a .fa-arrow-left {
     padding-left: 20px;
   }
   .container__main-menu .container__menu {
