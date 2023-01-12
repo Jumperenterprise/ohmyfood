@@ -749,7 +749,7 @@ main .container__restaurant .container__cards .card .card__body .fa-solid {
     margin: 2.5% auto 1.5%;
   }
   .container__main-menu .header__menu .navigation a .fa-solid,
-.container__main-menu .header__menu .navigation a .fa-arrow-left {
+  .container__main-menu .header__menu .navigation a .fa-arrow-left {
     padding-left: 20px;
   }
   .container__main-menu .container__menu {
